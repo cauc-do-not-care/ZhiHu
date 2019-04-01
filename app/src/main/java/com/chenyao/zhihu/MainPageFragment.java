@@ -7,17 +7,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link concernFragment.OnFragmentInteractionListener} interface
+ * {@link MainPageFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link concernFragment#newInstance} factory method to
+ * Use the {@link MainPageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class concernFragment extends Fragment {
+public class MainPageFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +30,7 @@ public class concernFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public concernFragment() {
+    public MainPageFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +40,11 @@ public class concernFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment concernFragment.
+     * @return A new instance of fragment MainPageFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static concernFragment newInstance(String param1, String param2) {
-        concernFragment fragment = new concernFragment();
+    public static MainPageFragment newInstance(String param1, String param2) {
+        MainPageFragment fragment = new MainPageFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,10 +62,17 @@ public class concernFragment extends Fragment {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        TextView textView = getActivity().findViewById(R.id.textview_main);
+        textView.setText("这是首页哦");
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_concern, container, false);
+        return inflater.inflate(R.layout.fragment_mainpage, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
