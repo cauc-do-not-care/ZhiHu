@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_bar_concern"
+        app:showAsAction="always"
+        android:title="关注"/>
+    <item
+        android:id="@+id/action_bar_recommend"
+        app:showAsAction="always"
+        android:title="推荐"/>
+    <item
+        android:id="@+id/action_bar_hotsearch"
+        app:showAsAction="always"
+        android:title="热搜"/>
+
+</menu>
