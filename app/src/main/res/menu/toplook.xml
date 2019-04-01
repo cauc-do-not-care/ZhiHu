@@ -4,15 +4,15 @@
 
     <item
         android:id="@+id/action_bar_concern"
-        app:showAsAction="always"
-        android:title="关注"/>
+        app:showAsAction="ifRoom"
+        android:title="@string/likes"/>
     <item
         android:id="@+id/action_bar_recommend"
-        app:showAsAction="always"
-        android:title="推荐"/>
+        app:showAsAction="ifRoom"
+        android:title="@string/recommend"/>
     <item
         android:id="@+id/action_bar_hotsearch"
-        app:showAsAction="always"
-        android:title="热搜"/>
+        app:showAsAction="ifRoom"
+        android:title="@string/hotsearch"/>
 
 </menu>
