@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_bar_concern"
+        app:showAsAction="ifRoom"
+        android:title="@string/likes"/>
+    <item
+        android:id="@+id/action_bar_recommend"
+        app:showAsAction="ifRoom"
+        android:title="@string/recommend"/>
+    <item
+        android:id="@+id/action_bar_hotsearch"
+        app:showAsAction="ifRoom"
+        android:title="@string/hotsearch"/>
+
+</menu>
