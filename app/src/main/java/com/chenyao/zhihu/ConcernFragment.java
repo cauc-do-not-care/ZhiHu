@@ -4,9 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.lang.reflect.Constructor;
 
 
 /**
@@ -17,7 +22,7 @@ import android.view.ViewGroup;
  * Use the {@link ConcernFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConcernFragment extends Fragment {
+public class ConcernFragment extends ListFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,9 +31,12 @@ public class ConcernFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private OnFragmentInteractionListener mListener;
-
+    private static final String[] strs = {
+        "first", "second", "third", "fourth", "fifth"
+    };
+    private ListView lv;
+    private ArrayAdapter adapter;
     public ConcernFragment() {
         // Required empty public constructor
     }
@@ -41,7 +49,7 @@ public class ConcernFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment ConcernFragment.
      */
-    // TODO: Rename and change types and number of parameters
+    // TODO: Rename and change types and number of parameters6
     public static ConcernFragment newInstance(String param1, String param2) {
         ConcernFragment fragment = new ConcernFragment();
         Bundle args = new Bundle();
@@ -64,9 +72,12 @@ public class ConcernFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_concern, container, false);
+        View view= inflater.inflate(R.layout.fragment_concern , container,false);
+        lv = (ListView)view.findViewById(android.R.id.list);
+        adapter = new ArrayAdapter<String>(getActivity(),R.layout.listlayout_from_concern,strs);
+        lv.setAdapter(adapter);
+        return view;
     }
-
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
