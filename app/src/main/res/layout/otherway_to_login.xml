@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aliceblue">
+
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="201dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="357dp"
+        android:ems="10"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="30sp"
+        android:autoLink="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/getTestCode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="102dp"
+        android:text="欢迎登陆知乎"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/getTestCode"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="366dp"
+        android:text="获取验证码"
+        android:textAlignment="center"
+
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/returnUser"
+        android:layout_width="73dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="247dp"
+        android:text="用户名密码登陆"
+        android:textColor="@color/blue"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="4dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="240dp"
+        android:text="|"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/moreAction"
+        app:layout_constraintStart_toEndOf="@+id/returnUser"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+    <TextView
+        android:id="@+id/moreAction"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="247dp"
+        android:text="更多"
+        android:textColor="@color/blue"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+</android.support.constraint.ConstraintLayout>
